@@ -1,0 +1,117 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main class="container my-4" id="cartList">
+    <!-- Featured Products -->
+    <div class="row">
+        <div class="col-md-9">
+            <h3 class="my-4 border-bottom pb-1">Cart ({{ totalitems }})</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product_id, item in cart_data.items %}
+                    <tr>
+                        <td>
+                            <img src="/media/{{ item.image }}" width="50" />
+                            <p><a href="/product/{{ item.title|slugify }}/{{ product_id }}">{{ item.title }}</a></p>
+                        </td>
+                        <td>
+                            {{ item.qty }}
+                        </td>
+                        <td>Ksh {{ item.price }}</td>
+                        <td>Ksh {% widthratio item.price 1 item.qty %}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <th>Total</th>
+                        <th>Ksh. {{ total_amt }}</th>
+                    </tr>
+                    {% if totalitems %}
+                    <tr>
+                        <td colspan="4" align="right">
+                            <!-- Payment Option Selection -->
+                            <div class="my-4">
+                                <label for="payment_option">Select Payment Option:</label>
+                               
+                            </div>
+
+                            <!-- PayPal Payment Form -->
+                            <div id="PayPalPaymentsForm"  >
+                                
+                                {{ form.render }}
+                                
+                            </div>
+
+                            <!-- Lipa na Mpesa Button or Link -->
+                            <a href="{% url 'mpesa_payment' %}" id="mpesa_payment_button">
+                                <img src="{% static 'media/images/mpesa.png' %}" alt="M-Pesa"  style="max-width: 150px; max-height: 50px;" />
+                            </a>
+							
+                        </td>
+                    </tr>
+                    {% endif %}
+                </tfoot>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <h3 class="my-4 border-bottom pb-1">Selected Address</h3>
+            <div class="card">
+                <div class="card-body">
+                    <p>{{ address.address }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    document.getElementById("payment_option").addEventListener("change", function () {
+        var selectedOption = this.value;
+        var paypalForm = document.getElementById("PayPalPaymentsForm");
+        var mpesa_payment_button = document.getElementById("mpesa_payment_button");
+
+        // Hide both payment options by default
+        paypalForm.style.display = "none";
+        mpesa_payment_button.style.display = "none";
+
+        // Toggle display based on the selected payment option
+        if (selectedOption === "paypal") {
+            paypalForm.style.display = "block";
+        } else if (selectedOption === "mpesa_payment") {
+            mpesa_payment_button.style.display = "block";
+        }
+    });
+</script>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

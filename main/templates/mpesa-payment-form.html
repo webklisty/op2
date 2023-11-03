@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  
+    <style>
+      /* Global styles for all screen sizes */
+      body {
+        font-family: sans-serif;
+        background-color: #ffffff;
+      }
+     
+  
+      form {
+        width: 100%; /* Expand the form to fill the entire screen width */
+        max-width: 500px; /* Set a maximum width for the form */
+        margin: 0 auto; /* Center the form horizontally */
+        padding: 20px;
+        border: 1px solid #cccccc;
+      }
+  
+      input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #cccccc;
+      }
+  
+      input[type="submit"] {
+        background-color: #24b84b;
+        color: #ffffff;
+        cursor: pointer;
+      }
+  
+      /* Media query for screens smaller than 768px wide */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 20px;
+        }
+      }
+  
+      /* Add more media queries for different screen sizes if needed */
+    </style>
+  
+  
+</head>
+<body>
+  
+  <form method="post" action="{% url 'mpesa_payment' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Pay with M-Pesa">
+  </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

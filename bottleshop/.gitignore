@@ -1,0 +1,28 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore database files
+*.sqlite3
+
+# Ignore secret keys and sensitive data
+*.secret_key
+*.secrets.json
+*.env
+
+# Ignore media and static files (for production, you should use a CDN)
+
+# Ignore .env files with environment-specific settings
+.env*
+
+# Ignore settings files with sensitive information
+settings/local.py
+settings/production.py
+# Ignore PayPal configuration file (if you store configuration in a file)
+paypal_config.ini
+
+# Ignore M-Pesa configuration files (if you store configuration in files)
+mpesa_config.json
+mpesa_keys.json
+
+# Ignore any sensitive payment-related files or credentials
