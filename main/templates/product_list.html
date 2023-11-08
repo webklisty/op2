@@ -20,7 +20,7 @@
 					  <a href="/product/{{product.slug}}/{{product.id}}"><img src="/media/{{product.productattribute_set.first.image}}" class="card-img-top" alt="{{product.title}}"></a>
 					  <div class="card-body">
 					    <h5 class="card-text"><a href="/product/{{product.slug}}/{{product.id}}">{{product.title}}</a></h5>
-					    <h6>$ <span class="product-price-{{product.id}}">{{product.productattribute_set.first.price}}</span></h6>
+					    <h6>Ksh <span class="product-price-{{product.id}}">{{product.productattribute_set.first.price}}</span></h6>
 					  </div>
 					  	<div class="card-footer">
 				          <input type="hidden" value="1" class="form-control product-qty-{{product.id}}" id="productQty" />
@@ -38,7 +38,7 @@
 				</div>
 				{% endfor %}
 			</div>
-			<p class="my-4 text-center"><button id="loadMore" data-total="{{total_data}}" data-limit="3" class="btn btn-dark btn-sm">Load More <i class="fa fa-sync load-more-icon"></i></button></p>
+			<p class="my-4 text-center"><button id="loadMore" data-total="{{total_data}}" data-limit="6" class="btn btn-dark btn-sm">Load More <i class="fa fa-sync load-more-icon"></i></button></p>
 		</div>
 	</div>
 </main>
