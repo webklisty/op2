@@ -1,5 +1,6 @@
 asgiref==3.7.2
 blinker==1.6.3
+boto3==1.28.79
 certifi==2023.7.22
 chardet==5.2.0
 charset-normalizer==3.2.0
@@ -31,6 +32,7 @@ requests==2.31.0
 sgmllib3k==1.0.0
 six==1.16.0
 sqlparse==0.4.4
+django-storages==1.14.2
 typing_extensions==4.8.0
 tzdata==2023.3
 urllib3==2.0.5
