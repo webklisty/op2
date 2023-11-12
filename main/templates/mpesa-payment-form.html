@@ -49,7 +49,7 @@
   <form method="post" action="{% url 'mpesa_payment' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Pay with M-Pesa">
+    <input type="submit" value="Pay with M-Pesa" disabled>
   </form>
 </body>
 </html>

@@ -545,7 +545,7 @@ def mpesa_payment(request):
                 }
 
                 headers = {
-                    "Authorization": 'Bearer ' + generate_mpesa_token(consumer_key, consumer_secret),
+                    "Authorization": 'Bearer'  + generate_mpesa_token(consumer_key, consumer_secret),
                     "Content-Type": "application/json"
                 }
 
