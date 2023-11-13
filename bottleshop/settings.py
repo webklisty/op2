@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+
 import os
 import django_heroku
 import dj_database_url
@@ -31,7 +32,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Disable debug mode in production
+DEBUG=True
+
+# Set the logging level to INFO in production
+
 
 ALLOWED_HOSTS = ['riks-58cc65a2e862.herokuapp.com',
     'www.nurubay.com',
