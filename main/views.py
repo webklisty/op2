@@ -676,7 +676,23 @@ def mpesa_callback(request):
 
 
 
+from django.core.mail import send_mail
+from django.shortcuts import render
+from django.conf import settings
 
+def index(request):
+    if request.method == 'POST':
+        message = request.POST['message']
+        email = request.POST['email']
+        name = request.POST['name']
+        send_mail(
+            name,               # title
+            message,            # message
+            settings.EMAIL_HOST_USER,   # sender email address
+            [email, 'felixwandera055@gmail.com'],   # receiver email
+            fail_silently=False
+        )
+    return render(request, 'email.html')
 
 
 

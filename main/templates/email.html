@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mpesa Payment Instructions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .instructions {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 600px) {
+            /* Adjust styles for larger screens if needed */
+            .instructions {
+                margin: 40px;
+                padding: 40px;
+            }
+
+            input {
+                width: calc(50% - 10px);
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>MPESA PAYMENTS INSTRUCTIONS.</h1>
+<div class="instructions">
+    <p>Please follow these instructions to complete your payment,<br> after which an invoice will be sent to your email:</p>
+
+    <ol>
+        <li>From your phone, go to Safaricom Menu.</li>
+        <li>Select M-PESA.</li>
+        <li>Select Lipa na MPESA.</li>
+        <li>Select Pay Bill.</li>
+        <li>Enter Business No: 777442.</li>
+        <li>Enter Account No: 4126757.</li>
+        <li>Enter Amount (without commas)</li>
+        <li>Then Confirm.</li>
+    </ol>
+
+    <p>Once you have completed these steps on your phone, please enter the transaction code you received from MPESA below.</p>
+</div>
+
+<form action="{% url 'index' %}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="mpesa_name">MPESA Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="transaction_code">MPESA Transaction Code[eg. RKA4ZDZK....]:</label>
+        <input type="text" id="message" name="message" required>
+    </div>
+
+    <input type="submit" value="Complete Transaction" class="button" style="background-color: green; color: white;">
+
+</form>
+</body>
+</html>

@@ -66,6 +66,7 @@ urlpatterns=[
 
     
     #path('initiate-stk-push/', views.initiate_stk_push, name='initiate_stk_push'),
+    path('index/', views.index, name='index'),
 
     # Wishlist
     path('add-wishlist',views.add_wishlist, name='add_wishlist'),
