@@ -223,3 +223,11 @@ EMAIL_HOST_USER = 'felixwandera055@gmail.com'
 EMAIL_HOST_PASSWORD = 'gkyh bdgo zcfb dijm '
 #DEFAULT_FROM_EMAIL = 'felixwandera055@gmail.com'
 
+
+
+
+
+if os.getcwd() == '/app':
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
+    DEBUG = False
