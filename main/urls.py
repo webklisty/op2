@@ -1,3 +1,4 @@
+from .views import custom_404_view
 from django.urls import path,include
 from . import views
 from django.contrib import admin
@@ -68,6 +69,7 @@ urlpatterns=[
     #path('initiate-stk-push/', views.initiate_stk_push, name='initiate_stk_push'),
     path('index/', views.index, name='index'),
 
+
     # Wishlist
     path('add-wishlist',views.add_wishlist, name='add_wishlist'),
     path('my-wishlist',views.my_wishlist, name='my_wishlist'),
@@ -79,6 +81,13 @@ urlpatterns=[
     path('activate-address',views.activate_address, name='activate-address'),
     path('update-address/<int:id>',views.update_address, name='update-address'),
     path('edit-profile',views.edit_profile, name='edit-profile'),
+    path('404/', custom_404_view, name='custom_404'),
+
+
+    
+ 
+
+    
 ]
 
 if settings.DEBUG:
@@ -86,7 +95,7 @@ if settings.DEBUG:
 
 
 
-
+handler404 = custom_404_view
 
 
 
