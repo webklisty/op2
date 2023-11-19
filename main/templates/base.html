@@ -14,6 +14,9 @@
 	<!-- CustomJs -->
 	<link rel="stylesheet" type="text/css" href="{% static 'custom.css' %}" />
 	<link rel="stylesheet" href="{% static '/footer.css' %}">
+	<link rel="stylesheet" href="{% static '/video.css' %}">
+	<link rel="stylesheet" href="{% static '/partners.css' %}">
+	<link rel="stylesheet" href="{% static '/logo.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'faqs.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'delivery.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'guideline.css' %}">
@@ -26,7 +29,11 @@
 		<!-- Other header content -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container">
-		  <a class="navbar-brand" href="/">Nurubay</a>
+			
+				<a class="navex-brand" href="/">
+				  <img src="{% static 'media/images/logo.jpg' %}" alt="Nurubay Logo">
+				</a>
+			  
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -73,6 +80,62 @@
     
     {% block content %}
     {% endblock %}
+
+	<section id="partners-section">
+        <h2 id="partners-title"><strong>OUR PARTNERS</strong></h2>
+        <div id="partner-marquee">
+            <img src="{% static 'media/images/jumia.png' %}" >
+            <img src="{% static 'media/images/equity.png' %}" >
+            <img src="{% static 'media/images/saf.png' %}" >
+			<img src="{% static 'media/images/ebay.jpg' %}" >
+			<img src="{% static 'media/images/kilimall.png' %}" >
+			<img src="{% static 'media/images/amazon.jpg' %}" >
+			<img src="{% static 'media/images/nik.png' %}" >
+			<img src="{% static 'media/images/paypal.png' %}" >
+			<img src="{% static 'media/images/kcb.png' %}" >
+			<img src="{% static 'media/images/coop.jpg' %}" >
+			<img src="{% static 'media/images/alibaba.png' %}" >
+			<img src="{% static 'media/images/naivas.png' %}" >
+			<img src="{% static 'media/images/adido.png' %}" >
+			<img src="{% static 'media/images/lipa.jpg' %}" >
+
+            <!-- Add more partner images as needed -->
+        </div>
+    </section>
+	  
+
+    <!-- Support Section with Videos -->
+    <section class="support-section">
+        <div class="container">
+            <h6 class="section-title"><strong>SUPPORT</strong></h6>
+
+            <!-- How to Place an Order -->
+            <div class="support-video">
+                <h3 class="video-title">How do i order and pay ?</h3>
+                <video controls>
+                    <source src="{% static '869515f6-42e6-459b-ae2b-a4c9c6f51426(1).webm' %}" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- How to Request a Refund -->
+            <div class="support-video">
+                <h3 class="video-title">How to Manage my account</h3>
+                <video controls>
+                    <source src="{% static 'c9974ba9-2c8b-428a-b900-3c8c293fafc5(1).webm' %}" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+			<div class="support-video">
+                <h3 class="video-title">How do i buy and pay later?</h3>
+                <video controls>
+                    <source src="{% static 'df335f0f-5edc-4a53-8a10-1856a04927e5(2).webm' %}" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
 	
 	<body>
 		<div class="footer-dark">

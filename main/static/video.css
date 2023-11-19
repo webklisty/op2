@@ -1,0 +1,41 @@
+/* Additional styles for responsiveness */
+
+.support-section {
+    padding: 40px 0;
+    background-color: #fff; /* Add your preferred background color */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%; /* Ensure the title takes full width */
+    font-size: 19px;
+}
+
+.support-video {
+    width: calc(33.33% - 20px); /* Adjust width as needed */
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.video-title {
+    margin-bottom: 15px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensure video is treated as a block element */
+}
+
+
+
+
+
+
