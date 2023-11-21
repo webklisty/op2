@@ -37,12 +37,14 @@
 			<hr/>
 			<div class="input-group my-3" style="width:30%;">
 			  <input type="number" value="1" class="form-control product-qty-{{data.id}}" id="productQty" />
-			  <div class="input-group-append">
-			  	<input type="hidden" class="product-image-{{data.id}}" value="{{data.productattribute_set.first.image}}" />
-		          <input type="hidden" class="product-id-{{data.id}}" value="{{data.id}}" />
-		          <input type="hidden" class="product-title-{{data.id}}" value="{{data.title}}" />
-			    <button class="btn btn-primary btn-sm add-to-cart" data-index="{{data.id}}" type="button" id="addToCartBtn"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-			  </div>
+				<!-- Your existing HTML for the button -->
+				<div class="input-group-append">
+					<input type="hidden" class="product-image-{{data.id}}" value="{{data.productattribute_set.first.image}}" />
+					<input type="hidden" class="product-id-{{data.id}}" value="{{data.id}}" />
+					<input type="hidden" class="product-title-{{data.id}}" value="{{data.title}}" />
+					<button class="btn btn-primary btn-sm add-to-cart" data-index="{{data.id}}" type="button" id="addToCartBtn"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+
 			</div>
 		</div>
 	</div>
@@ -132,7 +134,7 @@
 		</div>
 	</div>
 	<!-- Related Products -->
-	<h3 class="mt-4 mb-3 border-bottom pb-1">Related Products</h3>
+	<h3 class="mt-4 mb-3 border-bottom pb-1"></h3>
 	<div class="row">
 		{% for product in related %}
 		<div class="col-lg-3 col-sm-4 mb-4">
@@ -152,6 +154,45 @@
 			</div>
 		</div>
 		{% endfor %}
+		<!-- Add this CSS for styling the toast notification -->
+        
+		<!-- Add this HTML for the toast notification -->
+		<div id="toast" class="toast">
+			<div class="toast-body">
+				Added to cart successfully please view your cart
+			</div>
+		</div>
+
+		<style>
+			.toast {
+				display: none;
+				position: fixed;
+			    bottom: 20px;
+				right: 10px;
+				background-color: #28a745;
+				color: #fff;
+				padding: 15px;
+				border-radius: 5px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+
+			.toast.show {
+				display: block;
+			}
+		</style>
+		<script>
+			document.getElementById('addToCartBtn').addEventListener('click', function() {
+				// Show the toast
+				var toast = document.getElementById('toast');
+				toast.classList.add('show');
+		
+				// Hide the toast after 3 seconds (adjust as needed)
+				setTimeout(function() {
+					toast.classList.remove('show');
+				}, 3000);
+			});
+		</script>
+        
 	</div>
 </main>
 <!-- Image Zoom -->
@@ -159,6 +200,10 @@
 <script type="text/javascript">
     Ksh('#zoom_01').ezPlus();
 </script>
+
+<!-- Add this JavaScript to handle the toast display -->
+
+
 
 <!-- Add To Cart -->
 <script src="{% static 'custom.js' %}"></script>
