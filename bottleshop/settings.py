@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Disable debug mode in production
-#DEBUG=True
+DEBUG=True
 
 # Set the logging level to INFO in production
 
