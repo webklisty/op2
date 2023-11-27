@@ -9,7 +9,7 @@
   }
   
   .navex-brand img {
-    height: 3rem;
+    height: 4rem;
     background-color: blue;
     width: 100px;
   }
@@ -17,6 +17,6 @@
   @media (max-width: 768px) {
   
     .navex-brand img {
-      height: 150px;
+      height: 3rem;
     }
   }
