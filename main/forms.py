@@ -30,7 +30,7 @@ class ProfileForm(UserChangeForm):
 from django import forms
 
 class PhoneNumberForm(forms.Form):
-    phone_number = forms.CharField(max_length=15, required=True, label='Phone Number')
+    phone_number = forms.CharField(max_length=15, required=True, label='Mpesa Phone Number')
 
 
 

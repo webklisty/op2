@@ -711,6 +711,133 @@ def custom_404_view(request, exception):
 
 
 
+from django.shortcuts import render
+import base64
+import re
+import requests
+from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
+from django.urls import reverse
+from .models import CartOrder, CartOrderItems
+from .forms import PhoneNumberForm  # Create a Django form for the phone number
+from datetime import datetime
+
+# Your existing code for the checkout view
+
+# M-Pesa Payment Integration
+@csrf_exempt
+def mpesa_payment(request):
+    if request.method == 'POST':
+        form = PhoneNumberForm(request.POST)  # Create a form to capture the phone number
+        if form.is_valid():
+            phone_number = form.cleaned_data['phone_number']
+            # Validate phone number
+            phone_number = re.sub(r"^0", "254", phone_number) if phone_number.startswith(('01', '07')) else phone_number
+
+            if 'cartdata' in request.session:
+                cart_data = request.session['cartdata']
+                total_amt = 0.0  # Initialize total amount as a float
+
+                for p_id, item in cart_data.items():
+                    try:
+                        item_price = float(item['price'])
+                        item_qty = int(item['qty'])
+                        total_amt += item_qty * item_price
+                    except (ValueError, KeyError):
+                        # Handle errors if 'price' or 'qty' are missing or cannot be be converted
+                        pass
+
+                # Create an order
+                order = CartOrder.objects.create(
+                    user=request.user,
+                    total_amt=total_amt
+                )
+                print("order", order)
+
+                # Your existing code to create order items
+
+                # Generate an M-Pesa payment request
+                consumer_key = "U0NEZGkG1o2y99IcGF3DKzRcp1vWDNYP"
+                consumer_secret = "ChBIvQOJQZaRXnQQ"
+                lipa_na_mpesa_online_passkey = "77c0ef0de21debd335827c4b9056011434e37febe099fb60505c3a5fccb78c06"
+                lipa_na_mpesa_online_shortcode = "4125255"
+                timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+
+                payload = {
+                    "BusinessShortCode": "4125255",
+                    "Password": __base64encode(lipa_na_mpesa_online_shortcode + lipa_na_mpesa_online_passkey + timestamp),
+                    "Timestamp": timestamp,
+                    "TransactionType": "CustomerPayBillOnline",
+                    "Amount": total_amt,
+                    "PartyA": phone_number,
+                    "PartyB": '4125255',
+                    "PhoneNumber": phone_number,
+                    "CallBackURL": 'https://www.nurubay.com/mpesa-callback/',
+                    "AccountReference": 'OrderNo-' + str(order.id),
+                    "TransactionDesc": 'E-commerce purchase'
+                }
+
+                headers = {
+                    "Authorization": 'Bearer ' + generate_mpesa_token(consumer_key, consumer_secret),
+                    "Content-Type": "application/json"
+                }
+
+                # Send the payment request to M-Pesa
+                response = requests.post('https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest',
+                                         json=payload, headers=headers)
+                print("response", response.text)
+                print(payload)
+                print('header', headers)
+                # Process the response and handle any errors
+                if response.status_code == 200:
+                    payment_data = response.text
+                    # Save payment details in your database
+
+                    # Check if the payment data is None
+                    if payment_data is not None:
+                        return render(request, 'mpesa-payment.html', {'payment_data': payment_data})
+                    else:
+                        return render(request, 'mpesa-payment-fail.html')
+                else:
+                    # Handle payment error
+                    return render(request, 'mpesa-payment-fail.html')
+            else:
+                # Handle no items in the cart
+                return render(request, 'empty-cart.html')
+    else:
+        form = PhoneNumberForm()  # Initialize an empty form
+    return render(request, 'mpesa-payment-form.html', {'form': form})
+
+
+# mpesa callback
+@csrf_exempt
+def mpesa_callback(request):
+    pass
+    # print(request)
+
+
+# BASE64 encoding of string
+def __base64encode(data):
+    return base64.b64encode(data.encode("ascii")).decode("ascii")
+
+
+# Generate M-Pesa token
+def generate_mpesa_token(consumer_key, consumer_secret):
+    password = __base64encode(consumer_key + ':' + consumer_secret)
+    response = requests.request("GET",
+                                'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials',
+                                headers={
+                                    'Authorization': 'Basic ' + password})
+    if response.status_code == 200:
+        print("Bearer " + response.json().get('access_token'))
+        return response.json().get('access_token')
+    return {"code": 400}
+
+
+
+
+
+
 
 
 

@@ -4921,12 +4921,14 @@
 
 @keyframes glow {
     from {
-        box-shadow: 0 0 5px rgba(0, 0, 255, 1);
-        color: #0000FF; /* Start with white color */
+        box-shadow: 0 0 5px rgba(0, 0, 255, 1); /* Blue box shadow */
+        color: #0000FF; /* Blue text color */
+        
+        
     }
     to {
-        box-shadow: 0 0 20px rgba(0, 0, 255, 1);
-        color: #0000FF; /* Change to black color */
+        box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+        color: #0000FF; /* Start with white color */
     }
 }
 
