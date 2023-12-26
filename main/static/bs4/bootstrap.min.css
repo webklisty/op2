@@ -41,27 +41,27 @@
     box-sizing: border-box
 }
 
-html {
+.html {
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent
 }
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section {
+.article,
+.aside,
+.figcaption,
+.figure,
+.footer,
+.header,
+.hgroup,
+.main,
+.nav,
+.section {
     display: block
 }
 
-body {
+.body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
@@ -76,29 +76,29 @@ body {
     outline: 0 !important
 }
 
-hr {
+.hr {
     box-sizing: content-box;
     height: 0;
     overflow: visible
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     margin-top: 0;
     margin-bottom: .5rem
 }
 
-p {
+.p {
     margin-top: 0;
     margin-bottom: 1rem
 }
 
-abbr[data-original-title],
-abbr[title] {
+.abbr[data-original-title],
+.abbr[title] {
     text-decoration: underline;
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
@@ -108,119 +108,119 @@ abbr[title] {
     text-decoration-skip-ink: none
 }
 
-address {
+.address {
     margin-bottom: 1rem;
     font-style: normal;
     line-height: inherit
 }
 
-dl,
-ol,
-ul {
+.dl,
+.ol,
+.ul {
     margin-top: 0;
     margin-bottom: 1rem
 }
 
-ol ol,
-ol ul,
-ul ol,
-ul ul {
+.ol .ol,
+.ol .ul,
+.ul .ol,
+.ul .ul {
     margin-bottom: 0
 }
 
-dt {
+.dt {
     font-weight: 700
 }
 
-dd {
+.dd {
     margin-bottom: .5rem;
     margin-left: 0
 }
 
-blockquote {
+.blockquote {
     margin: 0 0 1rem
 }
 
-b,
-strong {
+.b,
+.strong {
     font-weight: bolder
 }
 
-small {
+.small {
     font-size: 80%
 }
 
-sub,
-sup {
+.sub,
+.sup {
     position: relative;
     font-size: 75%;
     line-height: 0;
     vertical-align: baseline
 }
 
-sub {
+.sub {
     bottom: -.25em
 }
 
-sup {
+.sup {
     top: -.5em
 }
 
-a {
+.a {
     color: #007bff;
     text-decoration: none;
     background-color: transparent
 }
 
-a:hover {
+.a:hover {
     color: #0056b3;
     text-decoration: underline
 }
 
-a:not([href]):not([class]) {
+.a:not([href]):not([class]) {
     color: inherit;
     text-decoration: none
 }
 
-a:not([href]):not([class]):hover {
+.a:not([href]):not([class]):hover {
     color: inherit;
     text-decoration: none
 }
 
-code,
-kbd,
-pre,
-samp {
+.code,
+.kbd,
+.pre,
+.samp {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 1em
 }
 
-pre {
+.pre {
     margin-top: 0;
     margin-bottom: 1rem;
     overflow: auto;
     -ms-overflow-style: scrollbar
 }
 
-figure {
+.figure {
     margin: 0 0 1rem
 }
 
-img {
+.img {
     vertical-align: middle;
     border-style: none
 }
 
-svg {
+.svg {
     overflow: hidden;
     vertical-align: middle
 }
 
-table {
+.table {
     border-collapse: collapse
 }
 
-caption {
+.caption {
     padding-top: .75rem;
     padding-bottom: .75rem;
     color: #6c757d;
@@ -228,42 +228,42 @@ caption {
     caption-side: bottom
 }
 
-th {
+.th {
     text-align: inherit
 }
 
-label {
+.label {
     display: inline-block;
     margin-bottom: .5rem
 }
 
-button {
+.button {
     border-radius: 0
 }
 
-button:focus {
+.button:focus {
     outline: 1px dotted;
     outline: 5px auto -webkit-focus-ring-color
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+.button,
+.input,
+.optgroup,
+.select,
+.textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit
 }
 
-button,
-input {
+.button,
+.input {
     overflow: visible
 }
 
-button,
-select {
+.button,
+.select {
     text-transform: none
 }
 
@@ -271,51 +271,51 @@ select {
     cursor: pointer
 }
 
-select {
+.select {
     word-wrap: normal
 }
 
 [type=button],
 [type=reset],
 [type=submit],
-button {
+.button {
     -webkit-appearance: button
 }
 
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
-button:not(:disabled) {
+.button:not(:disabled) {
     cursor: pointer
 }
 
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner,
-button::-moz-focus-inner {
+.button::-moz-focus-inner {
     padding: 0;
     border-style: none
 }
 
-input[type=checkbox],
-input[type=radio] {
+.input[type=checkbox],
+.input[type=radio] {
     box-sizing: border-box;
     padding: 0
 }
 
-textarea {
+.textarea {
     overflow: auto;
     resize: vertical
 }
 
-fieldset {
+.fieldset {
     min-width: 0;
     padding: 0;
     margin: 0;
     border: 0
 }
 
-legend {
+.legend {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -327,7 +327,7 @@ legend {
     white-space: normal
 }
 
-progress {
+.progress {
     vertical-align: baseline
 }
 
@@ -350,16 +350,16 @@ progress {
     -webkit-appearance: button
 }
 
-output {
+.output {
     display: inline-block
 }
 
-summary {
+.summary {
     display: list-item;
     cursor: pointer
 }
 
-template {
+.template {
     display: none
 }
 
@@ -373,44 +373,44 @@ template {
 .h4,
 .h5,
 .h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     margin-bottom: .5rem;
     font-weight: 500;
     line-height: 1.2
 }
 
 .h1,
-h1 {
+.h1 {
     font-size: 2.5rem
 }
 
 .h2,
-h2 {
+.h2 {
     font-size: 2rem
 }
 
 .h3,
-h3 {
+.h3 {
     font-size: 1.75rem
 }
 
 .h4,
-h4 {
+.h4 {
     font-size: 1.5rem
 }
 
 .h5,
-h5 {
+.h5 {
     font-size: 1.25rem
 }
 
 .h6,
-h6 {
+.h6 {
     font-size: 1rem
 }
 
@@ -443,7 +443,7 @@ h6 {
     line-height: 1.2
 }
 
-hr {
+.hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
@@ -451,13 +451,13 @@ hr {
 }
 
 .small,
-small {
+.small {
     font-size: 80%;
     font-weight: 400
 }
 
 .mark,
-mark {
+.mark {
     padding: .2em;
     background-color: #fcf8e3
 }
@@ -528,17 +528,17 @@ mark {
     color: #6c757d
 }
 
-code {
+.code {
     font-size: 87.5%;
     color: #e83e8c;
     word-wrap: break-word
 }
 
-a>code {
+.a>.code {
     color: inherit
 }
 
-kbd {
+.kbd {
     padding: .2rem .4rem;
     font-size: 87.5%;
     color: #fff;
@@ -546,19 +546,19 @@ kbd {
     border-radius: .2rem
 }
 
-kbd kbd {
+.kbd .kbd {
     padding: 0;
     font-size: 100%;
     font-weight: 700
 }
 
-pre {
+.pre {
     display: block;
     font-size: 87.5%;
     color: #212529
 }
 
-pre code {
+.pre .code {
     font-size: inherit;
     color: inherit;
     word-break: normal
@@ -1956,24 +1956,24 @@ pre code {
     color: #212529
 }
 
-.table td,
-.table th {
+.table .td,
+.table .th {
     padding: .75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6
 }
 
-.table thead th {
+.table .thead .th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6
 }
 
-.table tbody+tbody {
+.table .tbody+.tbody {
     border-top: 2px solid #dee2e6
 }
 
-.table-sm td,
-.table-sm th {
+.table-sm .td,
+.table-sm .th {
     padding: .3rem
 }
 
@@ -1981,42 +1981,42 @@ pre code {
     border: 1px solid #dee2e6
 }
 
-.table-bordered td,
-.table-bordered th {
+.table-bordered .td,
+.table-bordered .th {
     border: 1px solid #dee2e6
 }
 
-.table-bordered thead td,
-.table-bordered thead th {
+.table-bordered .thead .td,
+.table-bordered .thead .th {
     border-bottom-width: 2px
 }
 
-.table-borderless tbody+tbody,
-.table-borderless td,
-.table-borderless th,
-.table-borderless thead th {
+.table-borderless .tbody+.tbody,
+.table-borderless .td,
+.table-borderless .th,
+.table-borderless .thead .th {
     border: 0
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
+.table-striped .tbody .tr:nth-of-type(odd) {
     background-color: rgba(0, 0, 0, .05)
 }
 
-.table-hover tbody tr:hover {
+.table-hover .tbody .tr:hover {
     color: #212529;
     background-color: rgba(0, 0, 0, .075)
 }
 
 .table-primary,
-.table-primary>td,
-.table-primary>th {
+.table-primary>.td,
+.table-primary>.th {
     background-color: #b8daff
 }
 
-.table-primary tbody+tbody,
-.table-primary td,
-.table-primary th,
-.table-primary thead th {
+.table-primary .tbody+.tbody,
+.table-primary .td,
+.table-primary .th,
+.table-primary .thead .th {
     border-color: #7abaff
 }
 
@@ -2024,21 +2024,21 @@ pre code {
     background-color: #9fcdff
 }
 
-.table-hover .table-primary:hover>td,
-.table-hover .table-primary:hover>th {
+.table-hover .table-primary:hover>.td,
+.table-hover .table-primary:hover>.th {
     background-color: #9fcdff
 }
 
 .table-secondary,
-.table-secondary>td,
-.table-secondary>th {
+.table-secondary>.td,
+.table-secondary>.th {
     background-color: #d6d8db
 }
 
-.table-secondary tbody+tbody,
-.table-secondary td,
-.table-secondary th,
-.table-secondary thead th {
+.table-secondary .tbody+.tbody,
+.table-secondary .td,
+.table-secondary .th,
+.table-secondary .thead .th {
     border-color: #b3b7bb
 }
 
@@ -2046,21 +2046,21 @@ pre code {
     background-color: #c8cbcf
 }
 
-.table-hover .table-secondary:hover>td,
-.table-hover .table-secondary:hover>th {
+.table-hover .table-secondary:hover>.td,
+.table-hover .table-secondary:hover>.th {
     background-color: #c8cbcf
 }
 
 .table-success,
-.table-success>td,
-.table-success>th {
+.table-success>.td,
+.table-success>.th {
     background-color: #c3e6cb
 }
 
-.table-success tbody+tbody,
-.table-success td,
-.table-success th,
-.table-success thead th {
+.table-success .tbody+.tbody,
+.table-success .td,
+.table-success .th,
+.table-success .thead .th {
     border-color: #8fd19e
 }
 
@@ -2068,21 +2068,21 @@ pre code {
     background-color: #b1dfbb
 }
 
-.table-hover .table-success:hover>td,
-.table-hover .table-success:hover>th {
+.table-hover .table-success:hover>.td,
+.table-hover .table-success:hover>.th {
     background-color: #b1dfbb
 }
 
 .table-info,
-.table-info>td,
-.table-info>th {
+.table-info>.td,
+.table-info>.th {
     background-color: #bee5eb
 }
 
-.table-info tbody+tbody,
-.table-info td,
-.table-info th,
-.table-info thead th {
+.table-info .tbody+.tbody,
+.table-info .td,
+.table-info .th,
+.table-info .thead .th {
     border-color: #86cfda
 }
 
@@ -2090,21 +2090,21 @@ pre code {
     background-color: #abdde5
 }
 
-.table-hover .table-info:hover>td,
-.table-hover .table-info:hover>th {
+.table-hover .table-info:hover>.td,
+.table-hover .table-info:hover>.th {
     background-color: #abdde5
 }
 
 .table-warning,
-.table-warning>td,
-.table-warning>th {
+.table-warning>.td,
+.table-warning>.th {
     background-color: #ffeeba
 }
 
-.table-warning tbody+tbody,
-.table-warning td,
-.table-warning th,
-.table-warning thead th {
+.table-warning .tbody+.tbody,
+.table-warning .td,
+.table-warning .th,
+.table-warning .thead .th {
     border-color: #ffdf7e
 }
 
@@ -2112,21 +2112,21 @@ pre code {
     background-color: #ffe8a1
 }
 
-.table-hover .table-warning:hover>td,
-.table-hover .table-warning:hover>th {
+.table-hover .table-warning:hover>.td,
+.table-hover .table-warning:hover>.th {
     background-color: #ffe8a1
 }
 
 .table-danger,
-.table-danger>td,
-.table-danger>th {
+.table-danger>.td,
+.table-danger>.th {
     background-color: #f5c6cb
 }
 
-.table-danger tbody+tbody,
-.table-danger td,
-.table-danger th,
-.table-danger thead th {
+.table-danger .tbody+.tbody,
+.table-danger .td,
+.table-danger .th,
+.table-danger .thead .th {
     border-color: #ed969e
 }
 
@@ -2134,21 +2134,21 @@ pre code {
     background-color: #f1b0b7
 }
 
-.table-hover .table-danger:hover>td,
-.table-hover .table-danger:hover>th {
+.table-hover .table-danger:hover>.td,
+.table-hover .table-danger:hover>.th {
     background-color: #f1b0b7
 }
 
 .table-light,
-.table-light>td,
-.table-light>th {
+.table-light>.td,
+.table-light>.th {
     background-color: #fdfdfe
 }
 
-.table-light tbody+tbody,
-.table-light td,
-.table-light th,
-.table-light thead th {
+.table-light .tbody+.tbody,
+.table-light .td,
+.table-light .th,
+.table-light .thead .th {
     border-color: #fbfcfc
 }
 
@@ -2156,21 +2156,21 @@ pre code {
     background-color: #ececf6
 }
 
-.table-hover .table-light:hover>td,
-.table-hover .table-light:hover>th {
+.table-hover .table-light:hover>.td,
+.table-hover .table-light:hover>.th {
     background-color: #ececf6
 }
 
 .table-dark,
-.table-dark>td,
-.table-dark>th {
+.table-dark>.td,
+.table-dark>.th {
     background-color: #c6c8ca
 }
 
-.table-dark tbody+tbody,
-.table-dark td,
-.table-dark th,
-.table-dark thead th {
+.table-dark .tbody+.tbody,
+.table-dark .td,
+.table-dark .th,
+.table-dark .thead .th {
     border-color: #95999c
 }
 
@@ -2178,14 +2178,14 @@ pre code {
     background-color: #b9bbbe
 }
 
-.table-hover .table-dark:hover>td,
-.table-hover .table-dark:hover>th {
+.table-hover .table-dark:hover>.td,
+.table-hover .table-dark:hover>.th {
     background-color: #b9bbbe
 }
 
 .table-active,
-.table-active>td,
-.table-active>th {
+.table-active>.td,
+.table-active>.th {
     background-color: rgba(0, 0, 0, .075)
 }
 
@@ -2193,18 +2193,18 @@ pre code {
     background-color: rgba(0, 0, 0, .075)
 }
 
-.table-hover .table-active:hover>td,
-.table-hover .table-active:hover>th {
+.table-hover .table-active:hover>.td,
+.table-hover .table-active:hover>.th {
     background-color: rgba(0, 0, 0, .075)
 }
 
-.table .thead-dark th {
+.table .thead-dark .th {
     color: #fff;
     background-color: #343a40;
     border-color: #454d55
 }
 
-.table .thead-light th {
+.table .thead-light .th {
     color: #495057;
     background-color: #e9ecef;
     border-color: #dee2e6
@@ -2215,9 +2215,9 @@ pre code {
     background-color: #343a40
 }
 
-.table-dark td,
-.table-dark th,
-.table-dark thead th {
+.table-dark .td,
+.table-dark .th,
+.table-dark .thead .th {
     border-color: #454d55
 }
 
@@ -2225,11 +2225,11 @@ pre code {
     border: 0
 }
 
-.table-dark.table-striped tbody tr:nth-of-type(odd) {
+.table-dark.table-striped .tbody .tr:nth-of-type(odd) {
     background-color: rgba(255, 255, 255, .05)
 }
 
-.table-dark.table-hover tbody tr:hover {
+.table-dark.table-hover .tbody .tr:hover {
     color: #fff;
     background-color: rgba(255, 255, 255, .075)
 }
@@ -2368,16 +2368,16 @@ pre code {
     opacity: 1
 }
 
-input[type=date].form-control,
-input[type=datetime-local].form-control,
-input[type=month].form-control,
-input[type=time].form-control {
+.input[type=date].form-control,
+.input[type=datetime-local].form-control,
+.input[type=month].form-control,
+.input[type=time].form-control {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none
 }
 
-select.form-control:focus::-ms-value {
+.select.form-control:focus::-ms-value {
     color: #495057;
     background-color: #fff
 }
@@ -2445,12 +2445,12 @@ select.form-control:focus::-ms-value {
     border-radius: .3rem
 }
 
-select.form-control[multiple],
-select.form-control[size] {
+.select.form-control[multiple],
+.select.form-control[size] {
     height: auto
 }
 
-textarea.form-control {
+.textarea.form-control {
     height: auto
 }
 
@@ -2562,8 +2562,8 @@ textarea.form-control {
     box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25)
 }
 
-.was-validated textarea.form-control:valid,
-textarea.form-control.is-valid {
+.was-validated .textarea.form-control:valid,
+.textarea.form-control.is-valid {
     padding-right: calc(1.5em + .75rem);
     background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem)
 }
@@ -2677,8 +2677,8 @@ textarea.form-control.is-valid {
     box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25)
 }
 
-.was-validated textarea.form-control:invalid,
-textarea.form-control.is-invalid {
+.was-validated .textarea.form-control:invalid,
+.textarea.form-control.is-invalid {
     padding-right: calc(1.5em + .75rem);
     background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem)
 }
@@ -2873,8 +2873,8 @@ textarea.form-control.is-invalid {
     cursor: pointer
 }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+.a.btn.disabled,
+.fieldset:disabled .a.btn {
     pointer-events: none
 }
 
@@ -3541,9 +3541,9 @@ fieldset:disabled a.btn {
     margin-top: .5rem
 }
 
-input[type=button].btn-block,
-input[type=reset].btn-block,
-input[type=submit].btn-block {
+.input[type=button].btn-block,
+.input[type=reset].btn-block,
+.input[type=submit].btn-block {
     width: 100%
 }
 
@@ -3958,10 +3958,10 @@ input[type=submit].btn-block {
     margin-bottom: 0
 }
 
-.btn-group-toggle>.btn input[type=checkbox],
-.btn-group-toggle>.btn input[type=radio],
-.btn-group-toggle>.btn-group>.btn input[type=checkbox],
-.btn-group-toggle>.btn-group>.btn input[type=radio] {
+.btn-group-toggle>.btn .input[type=checkbox],
+.btn-group-toggle>.btn .input[type=radio],
+.btn-group-toggle>.btn-group>.btn .input[type=checkbox],
+.btn-group-toggle>.btn-group>.btn .input[type=radio] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none
@@ -4099,8 +4099,8 @@ input[type=submit].btn-block {
     border-radius: .25rem
 }
 
-.input-group-text input[type=checkbox],
-.input-group-text input[type=radio] {
+.input-group-text .input[type=checkbox],
+.input-group-text .input[type=radio] {
     margin-top: 0
 }
 
@@ -5336,12 +5336,12 @@ input[type=submit].btn-block {
     color: rgba(255, 255, 255, .5)
 }
 
-.navbar-dark .navbar-text a {
+.navbar-dark .navbar-text .a {
     color: #fff
 }
 
-.navbar-dark .navbar-text a:focus,
-.navbar-dark .navbar-text a:hover {
+.navbar-dark .navbar-text .a:focus,
+.navbar-dark .navbar-text .a:hover {
     color: #fff
 }
 .card {
@@ -5358,7 +5358,7 @@ input[type=submit].btn-block {
     border-radius: .25rem
 }
 
-.card>hr {
+.card>.hr {
     margin-right: 0;
     margin-left: 0
 }
@@ -5749,8 +5749,8 @@ input[type=submit].btn-block {
     }
 }
 
-a.badge:focus,
-a.badge:hover {
+.a.badge:focus,
+.a.badge:hover {
     text-decoration: none
 }
 
@@ -5774,14 +5774,14 @@ a.badge:hover {
     background-color: #007bff
 }
 
-a.badge-primary:focus,
-a.badge-primary:hover {
+.a.badge-primary:focus,
+.a.badge-primary:hover {
     color: #fff;
     background-color: #0062cc
 }
 
-a.badge-primary.focus,
-a.badge-primary:focus {
+.a.badge-primary.focus,
+.a.badge-primary:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5)
 }
@@ -5791,14 +5791,14 @@ a.badge-primary:focus {
     background-color: #6c757d
 }
 
-a.badge-secondary:focus,
-a.badge-secondary:hover {
+.a.badge-secondary:focus,
+.a.badge-secondary:hover {
     color: #fff;
     background-color: #545b62
 }
 
-a.badge-secondary.focus,
-a.badge-secondary:focus {
+.a.badge-secondary.focus,
+.a.badge-secondary:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(108, 117, 125, .5)
 }
@@ -5808,14 +5808,14 @@ a.badge-secondary:focus {
     background-color: #28a745
 }
 
-a.badge-success:focus,
-a.badge-success:hover {
+.a.badge-success:focus,
+.a.badge-success:hover {
     color: #fff;
     background-color: #1e7e34
 }
 
-a.badge-success.focus,
-a.badge-success:focus {
+.a.badge-success.focus,
+.a.badge-success:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5)
 }
@@ -5825,14 +5825,14 @@ a.badge-success:focus {
     background-color: #17a2b8
 }
 
-a.badge-info:focus,
-a.badge-info:hover {
+.a.badge-info:focus,
+.a.badge-info:hover {
     color: #fff;
     background-color: #117a8b
 }
 
-a.badge-info.focus,
-a.badge-info:focus {
+.a.badge-info.focus,
+.a.badge-info:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5)
 }
@@ -5842,14 +5842,14 @@ a.badge-info:focus {
     background-color: #ffc107
 }
 
-a.badge-warning:focus,
-a.badge-warning:hover {
+.a.badge-warning:focus,
+.a.badge-warning:hover {
     color: #212529;
     background-color: #d39e00
 }
 
-a.badge-warning.focus,
-a.badge-warning:focus {
+.a.badge-warning.focus,
+.a.badge-warning:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(255, 193, 7, .5)
 }
@@ -5859,14 +5859,14 @@ a.badge-warning:focus {
     background-color: #dc3545
 }
 
-a.badge-danger:focus,
-a.badge-danger:hover {
+.a.badge-danger:focus,
+.a.badge-danger:hover {
     color: #fff;
     background-color: #bd2130
 }
 
-a.badge-danger.focus,
-a.badge-danger:focus {
+.a.badge-danger.focus,
+.a.badge-danger:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .5)
 }
@@ -5876,14 +5876,14 @@ a.badge-danger:focus {
     background-color: #f8f9fa
 }
 
-a.badge-light:focus,
-a.badge-light:hover {
+.a.badge-light:focus,
+.a.badge-light:hover {
     color: #212529;
     background-color: #dae0e5
 }
 
-a.badge-light.focus,
-a.badge-light:focus {
+.a.badge-light.focus,
+.a.badge-light:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(248, 249, 250, .5)
 }
@@ -5893,14 +5893,14 @@ a.badge-light:focus {
     background-color: #343a40
 }
 
-a.badge-dark:focus,
-a.badge-dark:hover {
+.a.badge-dark:focus,
+.a.badge-dark:hover {
     color: #fff;
     background-color: #1d2124
 }
 
-a.badge-dark.focus,
-a.badge-dark:focus {
+.a.badge-dark.focus,
+.a.badge-dark:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(52, 58, 64, .5)
 }
@@ -5958,7 +5958,7 @@ a.badge-dark:focus {
     border-color: #b8daff
 }
 
-.alert-primary hr {
+.alert-primary .hr {
     border-top-color: #9fcdff
 }
 
@@ -5972,7 +5972,7 @@ a.badge-dark:focus {
     border-color: #d6d8db
 }
 
-.alert-secondary hr {
+.alert-secondary .hr {
     border-top-color: #c8cbcf
 }
 
@@ -5986,7 +5986,7 @@ a.badge-dark:focus {
     border-color: #c3e6cb
 }
 
-.alert-success hr {
+.alert-success .hr {
     border-top-color: #b1dfbb
 }
 
@@ -6000,7 +6000,7 @@ a.badge-dark:focus {
     border-color: #bee5eb
 }
 
-.alert-info hr {
+.alert-info .hr {
     border-top-color: #abdde5
 }
 
@@ -6014,7 +6014,7 @@ a.badge-dark:focus {
     border-color: #ffeeba
 }
 
-.alert-warning hr {
+.alert-warning .hr {
     border-top-color: #ffe8a1
 }
 
@@ -6028,7 +6028,7 @@ a.badge-dark:focus {
     border-color: #f5c6cb
 }
 
-.alert-danger hr {
+.alert-danger .hr {
     border-top-color: #f1b0b7
 }
 
@@ -6042,7 +6042,7 @@ a.badge-dark:focus {
     border-color: #fdfdfe
 }
 
-.alert-light hr {
+.alert-light .hr {
     border-top-color: #ececf6
 }
 
@@ -6056,7 +6056,7 @@ a.badge-dark:focus {
     border-color: #c6c8ca
 }
 
-.alert-dark hr {
+.alert-dark .hr {
     border-top-color: #b9bbbe
 }
 
@@ -6536,13 +6536,13 @@ a.badge-dark:focus {
     opacity: .75
 }
 
-button.close {
+.button.close {
     padding: 0;
     background-color: transparent;
     border: 0
 }
 
-a.close.disabled {
+.a.close.disabled {
     pointer-events: none
 }
 
@@ -7300,7 +7300,7 @@ a.close.disabled {
     list-style: none
 }
 
-.carousel-indicators li {
+.carousel-indicators .li {
     box-sizing: content-box;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
@@ -7443,10 +7443,10 @@ a.close.disabled {
     background-color: #007bff !important
 }
 
-a.bg-primary:focus,
-a.bg-primary:hover,
-button.bg-primary:focus,
-button.bg-primary:hover {
+.a.bg-primary:focus,
+.a.bg-primary:hover,
+.button.bg-primary:focus,
+.button.bg-primary:hover {
     background-color: #0062cc !important
 }
 
@@ -7454,10 +7454,10 @@ button.bg-primary:hover {
     background-color: #6c757d !important
 }
 
-a.bg-secondary:focus,
-a.bg-secondary:hover,
-button.bg-secondary:focus,
-button.bg-secondary:hover {
+.a.bg-secondary:focus,
+.a.bg-secondary:hover,
+.button.bg-secondary:focus,
+.button.bg-secondary:hover {
     background-color: #545b62 !important
 }
 
@@ -7465,10 +7465,10 @@ button.bg-secondary:hover {
     background-color: #28a745 !important
 }
 
-a.bg-success:focus,
-a.bg-success:hover,
-button.bg-success:focus,
-button.bg-success:hover {
+.a.bg-success:focus,
+.a.bg-success:hover,
+.button.bg-success:focus,
+.button.bg-success:hover {
     background-color: #1e7e34 !important
 }
 
@@ -7476,10 +7476,10 @@ button.bg-success:hover {
     background-color: #17a2b8 !important
 }
 
-a.bg-info:focus,
-a.bg-info:hover,
-button.bg-info:focus,
-button.bg-info:hover {
+.a.bg-info:focus,
+.a.bg-info:hover,
+.button.bg-info:focus,
+.button.bg-info:hover {
     background-color: #117a8b !important
 }
 
@@ -7487,10 +7487,10 @@ button.bg-info:hover {
     background-color: #ffc107 !important
 }
 
-a.bg-warning:focus,
-a.bg-warning:hover,
-button.bg-warning:focus,
-button.bg-warning:hover {
+.a.bg-warning:focus,
+.a.bg-warning:hover,
+.button.bg-warning:focus,
+.button.bg-warning:hover {
     background-color: #d39e00 !important
 }
 
@@ -7498,10 +7498,10 @@ button.bg-warning:hover {
     background-color: #dc3545 !important
 }
 
-a.bg-danger:focus,
-a.bg-danger:hover,
-button.bg-danger:focus,
-button.bg-danger:hover {
+.a.bg-danger:focus,
+.a.bg-danger:hover,
+.button.bg-danger:focus,
+.button.bg-danger:hover {
     background-color: #bd2130 !important
 }
 
@@ -7509,10 +7509,10 @@ button.bg-danger:hover {
     background-color: #f8f9fa !important
 }
 
-a.bg-light:focus,
-a.bg-light:hover,
-button.bg-light:focus,
-button.bg-light:hover {
+.a.bg-light:focus,
+.a.bg-light:hover,
+.button.bg-light:focus,
+.button.bg-light:hover {
     background-color: #dae0e5 !important
 }
 
@@ -7520,10 +7520,10 @@ button.bg-light:hover {
     background-color: #343a40 !important
 }
 
-a.bg-dark:focus,
-a.bg-dark:hover,
-button.bg-dark:focus,
-button.bg-dark:hover {
+.a.bg-dark:focus,
+.a.bg-dark:hover,
+.button.bg-dark:focus,
+.button.bg-dark:hover {
     background-color: #1d2124 !important
 }
 
@@ -11359,8 +11359,8 @@ button.bg-dark:hover {
     color: #007bff !important
 }
 
-a.text-primary:focus,
-a.text-primary:hover {
+.a.text-primary:focus,
+.a.text-primary:hover {
     color: #0056b3 !important
 }
 
@@ -11368,8 +11368,8 @@ a.text-primary:hover {
     color: #6c757d !important
 }
 
-a.text-secondary:focus,
-a.text-secondary:hover {
+.a.text-secondary:focus,
+.a.text-secondary:hover {
     color: #494f54 !important
 }
 
@@ -11377,8 +11377,8 @@ a.text-secondary:hover {
     color: #28a745 !important
 }
 
-a.text-success:focus,
-a.text-success:hover {
+.a.text-success:focus,
+.a.text-success:hover {
     color: #19692c !important
 }
 
@@ -11386,8 +11386,8 @@ a.text-success:hover {
     color: #17a2b8 !important
 }
 
-a.text-info:focus,
-a.text-info:hover {
+.a.text-info:focus,
+.a.text-info:hover {
     color: #0f6674 !important
 }
 
@@ -11395,8 +11395,8 @@ a.text-info:hover {
     color: #ffc107 !important
 }
 
-a.text-warning:focus,
-a.text-warning:hover {
+.a.text-warning:focus,
+.a.text-warning:hover {
     color: #ba8b00 !important
 }
 
@@ -11404,8 +11404,8 @@ a.text-warning:hover {
     color: #dc3545 !important
 }
 
-a.text-danger:focus,
-a.text-danger:hover {
+.a.text-danger:focus,
+.a.text-danger:hover {
     color: #a71d2a !important
 }
 
@@ -11413,8 +11413,8 @@ a.text-danger:hover {
     color: #f8f9fa !important
 }
 
-a.text-light:focus,
-a.text-light:hover {
+.a.text-light:focus,
+.a.text-light:hover {
     color: #cbd3da !important
 }
 
@@ -11422,8 +11422,8 @@ a.text-light:hover {
     color: #343a40 !important
 }
 
-a.text-dark:focus,
-a.text-dark:hover {
+.a.text-dark:focus,
+.a.text-dark:hover {
     color: #121416 !important
 }
 
@@ -11481,42 +11481,42 @@ a.text-dark:hover {
         box-shadow: none !important
     }
 
-    a:not(.btn) {
+    .a:not(.btn) {
         text-decoration: underline
     }
 
-    abbr[title]::after {
+    .abbr[title]::after {
         content: " (" attr(title) ")"
     }
 
-    pre {
+    .pre {
         white-space: pre-wrap !important
     }
 
-    blockquote,
-    pre {
+    .blockquote,
+    .pre {
         border: 1px solid #adb5bd;
         page-break-inside: avoid
     }
 
-    thead {
+    .thead {
         display: table-header-group
     }
 
-    img,
-    tr {
+    .img,
+    .tr {
         page-break-inside: avoid
     }
 
-    h2,
-    h3,
-    p {
+    .h2,
+    .h3,
+    .p {
         orphans: 3;
         widows: 3
     }
 
-    h2,
-    h3 {
+    .h2,
+    .h3 {
         page-break-after: avoid
     }
 
@@ -11524,7 +11524,7 @@ a.text-dark:hover {
         size: a3
     }
 
-    body {
+    .body {
         min-width: 992px !important
     }
 
@@ -11544,13 +11544,13 @@ a.text-dark:hover {
         border-collapse: collapse !important
     }
 
-    .table td,
-    .table th {
+    .table .td,
+    .table .th {
         background-color: #fff !important
     }
 
-    .table-bordered td,
-    .table-bordered th {
+    .table-bordered .td,
+    .table-bordered .th {
         border: 1px solid #dee2e6 !important
     }
 
@@ -11558,14 +11558,14 @@ a.text-dark:hover {
         color: inherit
     }
 
-    .table-dark tbody+tbody,
-    .table-dark td,
-    .table-dark th,
-    .table-dark thead th {
+    .table-dark .tbody+.tbody,
+    .table-dark .td,
+    .table-dark .th,
+    .table-dark .thead .th {
         border-color: #dee2e6
     }
 
-    .table .thead-dark th {
+    .table .thead-dark .th {
         color: inherit;
         border-color: #dee2e6
     }

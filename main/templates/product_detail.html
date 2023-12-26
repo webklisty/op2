@@ -158,14 +158,14 @@
 		<!-- Add this CSS for styling the toast notification -->
         
 		<!-- Add this HTML for the toast notification -->
-		<div id="toast" class="toast">
-			<div class="toast-body">
+		<div id="popup" class="popup">
+			<div class="popup-body">
 				Added to cart successfully please view your cart
 			</div>
 		</div>
 
 		<style>
-			.toast {
+			.popup {
 				display: none;
 				position: fixed;
 				top: 70px;
@@ -176,20 +176,21 @@
 				border-radius: 5px;
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 			}
-
-			.toast.show {
+			.popup.show {
 				display: block;
 			}
+
+
 		</style>
 		<script>
 			document.getElementById('addToCartBtn').addEventListener('click', function() {
 				// Show the toast
-				var toast = document.getElementById('toast');
-				toast.classList.add('show');
+				var toast = document.getElementById('popup');
+				popup.classList.add('show');
 		
 				// Hide the toast after 3 seconds (adjust as needed)
 				setTimeout(function() {
-					toast.classList.remove('show');
+					popup.classList.remove('show');
 				}, 3000);
 			});
 		</script>
