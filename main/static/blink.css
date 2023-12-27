@@ -48,6 +48,7 @@
     .custom-message {
         font-size: 1rem;
         letter-spacing: 0.5px;
+        margin-bottom: 10px;
     }
 
     .custom-header {
