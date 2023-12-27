@@ -8,23 +8,32 @@ body {
   font-family: sans-serif;
   background-color: #ffffff;
   font-size: 16px;
-  display: flex; /* Set body as a flex container */
-  flex-direction: column; /* Arrange elements vertically */
-  justify-content: center; /* Center content vertically */
-  min-height: 100vh; /* Ensure full viewport height */
+  line-height: 1.6; /* Improved readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0; /* Remove default body margin */
 }
 
 /* Apply a responsive font size unit for better adaptability */
 html {
-  font-size: 62.5%;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px; /* Increase font size on larger screens */
+  }
 }
 
 form {
   width: 100%;
   max-width: 500px;
-  margin: 0 auto; /* Center the form horizontally */
+  margin: 0 auto;
   padding: 2rem;
   border: 1px solid #cccccc;
+  box-sizing: border-box; /* Include padding and border in total width */
 }
 
 input, select, textarea {
@@ -33,6 +42,7 @@ input, select, textarea {
   margin-bottom: 1rem;
   border: 1px solid #cccccc;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -40,27 +50,29 @@ input[type="submit"] {
   color: #ffffff;
   cursor: pointer;
   padding: 1rem 2rem;
+  font-size: 1rem;
 }
 
-/* Media queries for different screen sizes */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
+/* Additional styles for smaller screens (phones) */
+@media (max-width: 576px) {
   form {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  input, select, textarea {
-    font-size: 0.9rem;
+    
+    justify-content: flex-start;
+    font-size: 1rem;
   }
 
   input[type="submit"] {
-    font-size: 1rem;
+    padding: 1rem; /* Adjust button padding for smaller screens */
   }
 }
+
+/* Additional styles for iPads */
+@media (min-width: 768px) and (max-width: 1024px) {
+  form {
+    max-width: 80%; /* Adjust form width for iPads */
+  }
+}
+
 
 
 

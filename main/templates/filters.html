@@ -17,48 +17,63 @@
 			</div>
 			<!-- Filter 1 -->
 			<div class="card mb-4">
-				<h6 class="card-header">Colors</h6>
+				<a href="{% url 'category-list' %}" class="card-header">
+					<h6>Popular products</h6>
+				</a>
 				<div class="list-group list-group-flush">
-					{% for color in colors %}
+					{% for cat in cats %}
 					<li class="list-group-item">
-						<input class="filter-checkbox" data-filter="color" value="{{color.color__id}}" type="checkbox" />&nbsp;
-						<button class="btn" style="background-color: {{color.color__color_code}}; margin-top: -5px;"></button>
+						<a href="{% url 'category_detail' cat.category__id %}">
+							<input class="filter-checkbox" data-filter="category" value="{{cat.category__id}}" type="checkbox" />&nbsp;
+							{{cat.category__title}}
+						</a>
 					</li>
 					{% endfor %}
 				</div>
 			</div>
 			<!-- Filter 2 -->
 			<div class="card mb-4">
-				<h6 class="card-header">Categories</h6>
+				<a href="{% url 'category-list' %}" class="card-header">
+					<h6>Categories</h6>
+				</a>
 				<div class="list-group list-group-flush">
 					{% for cat in cats %}
 					<li class="list-group-item">
-						<input class="filter-checkbox" data-filter="category" value="{{cat.category__id}}" type="checkbox" />&nbsp;
-						{{cat.category__title}}
+						<a href="{% url 'category_detail' cat.category__id %}">
+							<input class="filter-checkbox" data-filter="category" value="{{cat.category__id}}" type="checkbox" />&nbsp;
+							{{cat.category__title}}
+						</a>
 					</li>
 					{% endfor %}
 				</div>
 			</div>
+			
 			<!-- Filter 3 -->
 			<div class="card mb-4">
-				<h6 class="card-header">Brands</h6>
+				<a href="{% url 'brand-list' %}" class="card-header">Brands</a>
 				<div class="list-group list-group-flush">
 					{% for brand in brands %}
 					<li class="list-group-item">
-						<input class="filter-checkbox" data-filter="brand" value="{{brand.brand__id}}" type="checkbox" />&nbsp;
-						{{brand.brand__title}}
+						<a href="{% url 'brand-product-list' brand.brand__id %}">{{ brand.brand__title }}</a>
+						<input class="filter-checkbox" data-filter="brand" value="{{ brand.brand__id }}" type="checkbox" />&nbsp;
+						{{ brand.brand__title }}
 					</li>
 					{% endfor %}
 				</div>
 			</div>
+			
 			<!-- Filter 3 -->
 			<div class="card mb-4">
-				<h6 class="card-header">Sizes</h6>
+				<a href="{% url 'category-list' %}" class="card-header">
+					<h6>On Demand</h6>
+				</a>
 				<div class="list-group list-group-flush">
-					{% for size in sizes %}
+					{% for cat in cats %}
 					<li class="list-group-item">
-						<input class="filter-checkbox" data-filter="size" value="{{size.size__id}}" type="checkbox" />&nbsp;
-						{{size.size__title}}
+						<a href="{% url 'category_detail' cat.category__id %}">
+							<input class="filter-checkbox" data-filter="category" value="{{cat.category__id}}" type="checkbox" />&nbsp;
+							{{cat.category__title}}
+						</a>
 					</li>
 					{% endfor %}
 				</div>
