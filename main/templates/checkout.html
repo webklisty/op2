@@ -58,8 +58,8 @@
                                 <img src="{% static 'media/images/mpesa.png' %}" alt="M-Pesa"  style="max-width: 150px; max-height: 50px;" />
                             </a>
 
-                            <a href="{% url 'index' %}" id="mpesa_payment_button">
-                                <img src="{% static 'media/images/mpesa.png' %}" alt="M-Pesa"  style="max-width: 150px; max-height: 50px;" />
+                            <a href="{% url 'index' %}" id="mpesa_payment_button" onclick="return disableLink(event);">
+                                <img src="{% static 'media/images/airtel.jpg' %}" alt="Airtel"  style="max-width: 150px; max-height: 50px;" />
                             </a>
 							
                         </td>
@@ -95,6 +95,22 @@
             mpesa_payment_button.style.display = "block";
         }
     });
+
+
+
+</script>
+
+
+<script>
+    function disableLink(event) {
+        // Prevent the default action of the link
+        event.preventDefault();
+
+        // Optionally, you can add additional logic here if needed.
+
+        // Return false to indicate that the link should be disabled
+        return false;
+    }
 </script>
 
 
